@@ -35,7 +35,7 @@ namespace Web.Pages.Categories
                 return RedirectToPage("Index");
             }
 
-            return Page();
+            return RedirectToPage("Index");
         }
     }
 }
