@@ -1,0 +1,42 @@
+﻿@page
+@model Web.Pages.Categories.DeleteModel
+@{
+    ViewData["Edit"] = "Delete a Category";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-info">Delete a Category</h2>
+
+            <form method="post">
+
+                <input type="hidden" asp-for="Category.Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Category.Name" class="form-label"></label>
+                    <input asp-for="Category.Name" class="form-control"  placeholder="Insert name" readonly/>
+                    <span asp-validation-for="Category.Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Category.CreationDate" class="form-label"></label>
+                    <input asp-for="Category.CreationDate" class="form-control" readonly/>
+                    <span asp-validation-for="Category.CreationDate" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Return</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
