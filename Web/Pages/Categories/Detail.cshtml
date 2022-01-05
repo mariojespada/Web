@@ -1,0 +1,26 @@
+﻿@page
+@model Web.Pages.Categories.DetailModel
+@{    
+    ViewData["Title"] = "Details of a Category";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-info">Details of a Category @Html.DisplayFor(m=>m.Category.Id)</h2>
+
+            <input type="hidden" asp-for="Category.Id" />
+
+            <ul class="list-group">
+              <li class="list-group-item">ID: @Html.DisplayFor(m=>m.Category.Id)</li>
+              <li class="list-group-item">Name: @Html.DisplayFor(m=>m.Category.Name)</li>
+              <li class="list-group-item">Date: @Html.DisplayFor(m=>m.Category.CreationDate)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Return</a>
+        </div>
+    </div>
+</div>
