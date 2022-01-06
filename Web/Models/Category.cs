@@ -8,7 +8,7 @@ namespace Web.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage ="Required")]
-        [StringLength(15, ErrorMessage ="Minimum length is {2}", MinimumLength = 4)]
+        [StringLength(15, ErrorMessage = "The length for the {0} field has to be between {2} and {1}", MinimumLength = 4)]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Required")]

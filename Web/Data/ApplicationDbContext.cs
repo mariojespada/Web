@@ -11,5 +11,7 @@ namespace Web.Data
         }
 
         public DbSet<Category> Categories { get; set; }
+        
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
